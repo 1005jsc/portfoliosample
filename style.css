@@ -1,5 +1,9 @@
 /* Global */
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* Color */
   --color-white: #ffffff;
@@ -113,11 +117,15 @@ button {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-black);
+  background-color: transparent;
   color: var(--color-white);
+  z-index: 1;
+
   /* padding: 16px; */
 }
 .navbar__logo {
@@ -177,6 +185,7 @@ button {
 #home {
   background: url('imgs/상\ 4.PNG') center/cover no-repeat;
   padding: 40px;
+  padding-top: 100px;
   text-align: center;
 }
 

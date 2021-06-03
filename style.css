@@ -216,7 +216,7 @@ button {
   margin: 24px;
   padding: 8px 12px;
   border: 2px solid var(--color-white);
-  border-radious: var(--size-border-radius);
+  border-radius: var(--size-border-radius);
 }
 
 /* About */

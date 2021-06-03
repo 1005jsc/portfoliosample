@@ -28,7 +28,7 @@ navbarMenu.addEventListener('click', e => {
     return;
   }
   const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({behavior: "smooth"})
+  scrollTo.scrollIntoView({behavior: "smooth"});
   console.log(link);
 });
 
@@ -60,8 +60,8 @@ document.addEventListener('scroll', () => {
 
 //2. 누르면 제일 윗쪽으로 다시 올라가게끔 하기 
 
-document.addEventListener('click', () => {
+arrowUp.addEventListener('click', () => {
   window.scrollTo(0,0);
-})
+});
 
 

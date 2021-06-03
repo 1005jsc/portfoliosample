@@ -44,6 +44,24 @@ document.addEventListener('scroll', () => {
 });
 
 
+//4. arrow__up
 
+//1. 스크롤 되면 화면 밑에 나오게끔 하기 
+
+const arrowUp = document.querySelector('.arrow__up');
+document.addEventListener('scroll', () => {
+  if(window.scrollY > 800){
+    arrowUp.classList.add('arrow--show');
+  }else{
+    arrowUp.classList.remove('arrow--show');
+  }
+});
+
+
+//2. 누르면 제일 윗쪽으로 다시 올라가게끔 하기 
+
+document.addEventListener('click', () => {
+  window.scrollTo(0,0);
+})
 
 

@@ -1,10 +1,21 @@
 'use strict';
 
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+
+  if(window.scrollY > navbarHeight){
+    navbar.classList.add('navbar--dark');
+  }else{
+    navbar.classList.remove('navbar--dark');
+  }
+})
+
 
 const contactMe = document.querySelector('.home__contact');
 contactMe.addEventListener('click', () => {
   console.log('click confirmed')
-  window.scrollTo(0,7000)
+  window.scrollTo(0,5500)
 });
 
 const navbarMenu = document.querySelector('.navbar__menu');

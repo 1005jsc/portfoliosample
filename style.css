@@ -415,7 +415,17 @@ button {
 }
 
 .work__projects img {
-  max-width: 50%;
+  max-width: 133.32px;
+}
+.frame {
+  display: flex;
+  width: 246.02px;
+  height: 200px;
+  justify-content: center;
+}
+
+.project__img {
+  object-fit: cover;
 }
 
 .project__description {

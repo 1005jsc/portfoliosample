@@ -46,7 +46,7 @@ document.addEventListener('scroll', () => {
 
 //4. JS: Arrow Up (클릭하면 페이지 최상단으로 오르게하는 화살표 아이콘 만들기)
 
-//1. 스크롤 되면 화면 밑에 나오게끔 하기 
+//1). 스크롤 되면 화면 밑에 나오게끔 하기 
 
 const arrowUp = document.querySelector('.arrow__up');
 document.addEventListener('scroll', () => {
@@ -58,10 +58,33 @@ document.addEventListener('scroll', () => {
 });
 
 
-//2. 누르면 제일 윗쪽으로 다시 올라가게끔 하기 
+//2). 누르면 제일 윗쪽으로 다시 올라가게끔 하기 
 
 arrowUp.addEventListener('click', () => {
   window.scrollTo(0,0);
 });
+
+
+//5. JS: Project filtering 
+
+
+// const workCategories = document.querySelector('.work__categories');
+// const projects = document.querySelectorAll('.project')
+// workCategories.addEventListener('click', e => {
+//   const target2 = e.target;
+//   const filter = target2.dataset.filter;
+//   if(filter == null) {
+//     return;
+//   }
+//   // console.log(filter);
+//   const a = projects.dataset.type;
+//   if(filter == a) {
+//     console.log(a);
+//   }
+  
+  
+  
+// });
+
 
 

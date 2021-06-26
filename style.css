@@ -401,6 +401,10 @@ button {
   max-height: 200px;
 }
 
+.work__projects.invisible {
+  display: none;
+}
+
 .project {
   width: 250px;
   height: 200px;

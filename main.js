@@ -68,23 +68,28 @@ arrowUp.addEventListener('click', () => {
 //5. JS: Project filtering 
 
 
-// const workCategories = document.querySelector('.work__categories');
-// const projects = document.querySelectorAll('.project')
-// workCategories.addEventListener('click', e => {
-//   const target2 = e.target;
-//   const filter = target2.dataset.filter;
-//   if(filter == null) {
-//     return;
-//   }
-//   // console.log(filter);
-//   const a = projects.dataset.type;
-//   if(filter == a) {
-//     console.log(a);
-//   }
+const workCategories = document.querySelector('.work__categories');
+const projects = document.querySelectorAll('.work__projects')
+
+workCategories.addEventListener('click', e => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if(filter == null) {
+    return;
+  }
+  // console.log(filter);
+  projects.forEach((project)=>{
+    const projectDataType = project.dataset.type;
+    if(filter === '*' || filter==projectDataType){
+      project.classList.remove('invisible');
+    } else {
+      project.classList.add('invisible');
+    }
+  });
   
   
   
-// });
+  
+});
 
 
 

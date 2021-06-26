@@ -1,6 +1,6 @@
 'use strict';
 
-//1. navbar 스크롤 됨에 따라 투명해짐
+//1. JS: Navbar menu click (스크롤시 navbar가 투명해짐)
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
@@ -13,7 +13,7 @@ document.addEventListener('scroll', () => {
   }
 });
 
-//2. navbar li 누르면 해당위치로 이동
+//2. JS: navbar (navbar li 누르면 해당navbar 위치로 이동)
 const contactMe = document.querySelector('.home__contact');
 contactMe.addEventListener('click', () => {
   console.log('click confirmed')
@@ -33,7 +33,7 @@ navbarMenu.addEventListener('click', e => {
 });
 
 
-//3. 스크롤 됨에 따라 Home의 게시물이 투명해짐 
+//3. JS: home transparent (스크롤 됨에 따라 navbar가 투명해짐) 
 
 const home = document.querySelector('.home__container');
 const homesec = document.querySelector('#home')
@@ -44,7 +44,7 @@ document.addEventListener('scroll', () => {
 });
 
 
-//4. arrow__up
+//4. JS: Arrow Up (클릭하면 페이지 최상단으로 오르게하는 화살표 아이콘 만들기)
 
 //1. 스크롤 되면 화면 밑에 나오게끔 하기 
 

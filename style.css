@@ -391,6 +391,16 @@ button {
   margin: 0;
 }
 
+.work__projects a {
+  width: 250px;
+  height: 200px;
+}
+
+.work__projects img {
+  max-width: 250px;
+  max-height: 200px;
+}
+
 .project {
   width: 250px;
   height: 200px;

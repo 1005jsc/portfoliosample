@@ -132,7 +132,7 @@ button {
 
 #navbar.navbar--dark {
   background-color: var(--color-pink);
-  opacity: 0.7;
+  opacity: 0.6;
   transition: all var(--animation-duration) ease-in;
 }
 
@@ -389,6 +389,7 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
+  transition: all var(--animation-duration) ease-in;
 }
 
 .work__projects a {
@@ -403,6 +404,12 @@ button {
 
 .work__projects.invisible {
   display: none;
+}
+
+.work__projects.anim-out {
+  opacity: 0.8;
+  transition: all var(--animation-duration) ease-in;
+  transform: scale(0.9) translateY(40px);
 }
 
 .project {

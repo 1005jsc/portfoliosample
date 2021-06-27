@@ -5,6 +5,7 @@ const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
 
+
   if(window.scrollY > navbarHeight){
     
     navbar.classList.add('navbar--dark');
@@ -14,12 +15,13 @@ document.addEventListener('scroll', () => {
 });
 
 //2. JS: navbar (navbar li 누르면 해당navbar 위치로 이동)
-//2.1 navbar li 누르면 하이라이트 될 수 있도록 
+//2.1 navbar li 누르면 active 활성화 시키기
 const contactMe = document.querySelector('.home__contact');
 contactMe.addEventListener('click', () => {
   console.log('click confirmed')
   window.scrollTo(0,5500)
 });
+
 
 const navbarMenu = document.querySelector('.navbar__menu');
 const navbarMenuItems = document.querySelectorAll('.navbar__menu__item');
@@ -30,6 +32,7 @@ navbarMenu.addEventListener('click', e => {
   if(link == null) {
     return;
   }
+  navbarMenu.classList.add('invisible');
   navbarMenuItems.forEach((item) => {
     item.classList.remove('active')
   });
@@ -41,6 +44,29 @@ navbarMenu.addEventListener('click', e => {
   scrollTo.scrollIntoView({behavior: "smooth"});
   
 });
+
+
+//2.2  해당 타이틀 위치로 스크롤 하면 자동으로 navbar에 active가 켜지게끔 하기 
+// 이거는 지금 내 지식으로는 도저히 안되겠다 일단 보류
+
+
+// document.addEventListener('scroll', () => {
+//   navbarMenuItems.forEach((navbarMenuItem) => {
+//   if(navbarMenuItem.getBoundingClientRect().height + window.scrollY = ){
+//     console.log(navbarMenuItem.getBoundingClientRect().height);
+//     console.log(navbarMenuItem.dataset.link);
+    
+//     // navbarMenuItems.forEach((item) => {
+//     //   item.classList.remove('active')
+//     // });
+  
+//     // target.classList.add('active');
+//   };
+
+//   });
+
+// });
+
 
 
 //3. JS: home transparent (스크롤 됨에 따라 navbar가 투명해짐) 
@@ -107,6 +133,14 @@ workCategories.addEventListener('click', e => {
     } else {
       project.classList.add('invisible');
     };
-});
+  });
 });
 
+//6. togglebtn 만들기 누르면 껏다 켜졌다 할 수 있도록
+
+
+
+const button = document.querySelector('.navbar__toggle-btn');
+button.addEventListener('click', () => {
+  navbarMenu.classList.toggle('invisible');
+});

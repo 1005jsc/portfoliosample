@@ -14,6 +14,7 @@ document.addEventListener('scroll', () => {
 });
 
 //2. JS: navbar (navbar li 누르면 해당navbar 위치로 이동)
+//2.1 navbar li 누르면 하이라이트 될 수 있도록 
 const contactMe = document.querySelector('.home__contact');
 contactMe.addEventListener('click', () => {
   console.log('click confirmed')
@@ -21,12 +22,21 @@ contactMe.addEventListener('click', () => {
 });
 
 const navbarMenu = document.querySelector('.navbar__menu');
+const navbarMenuItems = document.querySelectorAll('.navbar__menu__item');
 navbarMenu.addEventListener('click', e => {
   const target = e.target;
   const link = target.dataset.link;
+
   if(link == null) {
     return;
   }
+  navbarMenuItems.forEach((item) => {
+    item.classList.remove('active')
+  });
+
+  target.classList.add('active');
+
+
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({behavior: "smooth"});
   

@@ -1,2 +1,2 @@
 # portfoliosample
- Ellie's portfolio
+javascript practice by making sample portfolio
